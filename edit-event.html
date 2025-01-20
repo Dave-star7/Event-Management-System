@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        .heading {
+            color: #333;
+        }
+        .event-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .event {
+            background: #e6f7ff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-left: 5px solid #007bff;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .edit-btn {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .edit-btn:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Edit Events</h1>
+        <div id="event-list" class="event-list">
+            <!-- Editable events will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const events = [
+                { title: "Tech Conference", date: "2025-02-15" },
+                { title: "Music Festival", date: "2025-03-10" },
+                { title: "Art Exhibition", date: "2025-04-05" }
+            ];
+
+            const eventList = document.getElementById("event-list");
+            
+            function renderEvents() {
+                eventList.innerHTML = "";
+                events.forEach((event, index) => {
+                    const eventDiv = document.createElement("div");
+                    eventDiv.classList.add("event");
+                    eventDiv.innerHTML = `<div>
+                                            <input type="text" value="${event.title}" id="title-${index}">
+                                            <input type="date" value="${event.date}" id="date-${index}">
+                                          </div>
+                                          <button class="edit-btn" onclick="editEvent(${index})">Save</button>`;
+                    eventList.appendChild(eventDiv);
+                });
+            }
+
+            window.editEvent = function(index) {
+                const titleInput = document.getElementById(`title-${index}`).value;
+                const dateInput = document.getElementById(`date-${index}`).value;
+                events[index] = { title: titleInput, date: dateInput };
+                alert("Event updated successfully!");
+                renderEvents();
+            };
+
+            renderEvents();
+        });
+    </script>
+</body>
+</html>
