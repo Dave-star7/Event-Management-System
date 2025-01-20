@@ -97,6 +97,6 @@ Special thanks to:
 * **Safaricom M-Pesa API** for payment integration.
 * **PDFKit** for generating PDF tickets.
 
-## Author
+## Authors
 **[Group 19]**
 
