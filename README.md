@@ -1,5 +1,3 @@
-# Event-Management-System
-Event Management Platform created during Power Learn Project Hackathon.
 # Event Management System
 
 A full-stack **Event Management System** that allows users to create, view, and manage events. This project includes functionalities like secure payments using M-Pesa, ticket generation, and event registration.
@@ -67,7 +65,7 @@ Set up the following variables in a `.env` file (if not hardcoding):
 ```env
 MYSQL_HOST=mysql.railway.internal
 MYSQL_USER=root
-MYSQL_PASSWORD=FLcJrDcbeEKZplsmGmQSkZoNAsiilnkY
+MYSQL_PASSWORD=password
 MYSQL_DATABASE=railway
 MYSQL_PORT=3306
 MPESA_CONSUMER_KEY=YOUR_CONSUMER_KEY
@@ -100,6 +98,5 @@ Special thanks to:
 * **PDFKit** for generating PDF tickets.
 
 ## Author
-**[Your Name]**
-GitHub: Your GitHub Profile
-Email: your.email@example.com
+**[Group 19]**
+
