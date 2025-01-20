@@ -15,18 +15,18 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/events', eventsRoutes); // Use the updated path
-
 // Root route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/events', eventsRoutes); // Use the updated path
 app.use('/api/mpesa', mpesaRoutes);
 app.use('/tickets', express.static(path.join(__dirname, 'public/tickets')));
 app.use("/api/admin", adminRoutes);
+
 // Start the server
 const PORT = 3000;
 app.listen(PORT, () => {
