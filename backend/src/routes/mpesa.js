@@ -20,10 +20,10 @@ if (!fs.existsSync(ticketsDir)) {
 }
 
 // M-Pesa credentials
-const consumerKey = "IG5GMgL8G2LR8ULOG5pL1uyeGmq2ALQi9G6c9eGEKuSRWGEX";
-const consumerSecret = "n3HGgttGR5I0NjGPlQN2gfsfX1uwAnviQGecBcjoRlnbXbqTpybH6byfWjauKc0F";
+const consumerKey = "key";
+const consumerSecret = "secret";
 const shortCode = "174379"; // Sandbox shortcode
-const passKey = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
+const passKey = "passkey";
 const callBackURL = "https://4824-196-201-224-102.ngrok-free.app/api/mpesa/callback"; // Replace with your public callback URL
 
 // Generate a timestamp (format: YYYYMMDDHHmmss)
@@ -200,7 +200,6 @@ async function generateTicket(data) {
           doc.text(`M-Pesa Receipt: ${data.receiptNumber}`);
           doc.text(`Issue Date: ${new Date().toLocaleString()}`);
 
-          // Add QR code or barcode here if needed
 
           doc.end();
 
