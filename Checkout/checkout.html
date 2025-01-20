@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <h1>Checkout Page</h1>
+        <div class="container">
+            <div class="column">
+                <div class="checkout">
+                    <label for="title">Event Title</label><br>
+                    <input type="text" name="title" id="title"><br>
+                
+        
+                    <label for="ticket">Ticket Type</label><br>
+                    <select name="ticket" id="ticket">
+                        <option value="early">Early Bird</option>
+                        <option value="vip">VIP</option>
+                        <option value="vvip">VVIP</option>
+                        <option value="general">General Admission</option>
+                    </select><br>
+                    <label for="quantity">Quantity</label><br>
+                    <input type="number" name="quantity" id="quantity" value="" min="0"><br>
+                    <label for="price">Price per Ticket</label><br>
+                    <input type="number" name="price" id="price" value="" min="0"><br>
+                   
+                   </div>
+            
+            </div>
+            <div class="column">
+             
+                <div class="payment-methods">
+                    <input type="radio" name="payment" id="mpesa" checked>  <label for="mpesa">M-PESA
+                     <img src="mpesa_logo.png" alt="MPESA"></label><br>
+                    <input type="radio" name="payment" id="paypal"> <label for="paypal">PayPal  <img src="paypal_logo.png" alt="PayPal">
+                        
+                    </div>
+                 <div id="mpesa-details" class="payment-details">
+                    <label for="payment-number">Payment Number</label>
+                    <input type="text" id="payment-number" name="payment-number" placeholder="Enter MPESA number">
+                </div>
+
+                <div id="paypal-details" class="payment-details" style="display: none;">
+                    <label for="paypal-email">PayPal Email</label>
+                    <input type="email" id="paypal-email" name="paypal-email" placeholder="Enter PayPal email">
+                </div>
+               
+            
+               
+                <h2>Order Summary</h2>
+                <div class="order-summary">
+                    <p><strong>Event:</strong> <span id="summary-title"></span></p>
+                    <p><strong>Tickets:</strong> <span id="summary-ticket"></span></p>
+                    <p><strong>Total:</strong> $<span id="summary-total">0.00</span></p>
+                    <button onclick="editOrder()">Edit Order</button>
+                </div>
+                <button class="btn" onclick="completePurchase()">Complete Purchase</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>
