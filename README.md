@@ -1,102 +1,53 @@
-# Event Management System
+# Weather App (Django)
 
-A full-stack **Event Management System** that allows users to create, view, and manage events. This project includes functionalities like secure payments using M-Pesa, ticket generation, and event registration.
+A **Django-based web application** that fetches real-time weather data for a given city using the OpenWeather API and displays a relevant image of the city using the Unsplash API.
 
 ## Features
 
-- **User Registration & Login:** Secure user authentication.
-- **Event Creation:** Organizers can create events with various details like name, date, category, and capacity.
-- **Ticket Booking:** Users can book tickets for available events.
-- **M-Pesa Integration:** Secure payment processing using M-Pesa.
-- **PDF Ticket Generation:** Automatically generates tickets for successful bookings.
-- **Responsive UI:** User-friendly design for seamless interaction.
+- **Real-time Weather Data:** Fetches current weather conditions (temperature, description, and icon) for any city using the OpenWeather API.
+- **City Image:** Displays a relevant image of the searched city using the Unsplash API.
+- **User-Friendly Interface:** Simple and intuitive interface for users to input a city name and view weather details.
+- **Default City:** If no city is provided, the app defaults to Nairobi.
 
 ## Technologies Used
 
 ### Backend
-- **Node.js**: Server-side JavaScript runtime.
-- **Express.js**: Web framework for Node.js.
-- **MySQL**: Relational database for storing event and user data.
+- **Django**: Python-based web framework for building the application.
+- **OpenWeather API**: Provides real-time weather data.
+- **Unsplash API**: Fetches high-quality images of cities.
 
 ### Frontend
 - **HTML/CSS**: For creating a responsive and engaging user interface.
-- **JavaScript**: For handling form submissions and API calls.
+- **Bootstrap**: For styling the frontend (optional).
 
 ### Tools
-- **Railway**: For deployment and database hosting.
-- **PDFKit**: For generating PDF tickets.
-- **Multer**: For handling file uploads.
+- **Requests**: For making API calls to OpenWeather and Unsplash.
+- **python-dotenv**: For managing environment variables (optional).
 
 ## Setup Instructions
 
 ### Prerequisites
-1. **Node.js** (v18 or higher)
-2. **MySQL** (Database setup is required)
-3. **M-Pesa Credentials** (For payment integration)
+1. **Python 3.x** (Latest version recommended)
+2. **Django** (To run the backend)
+3. **Requests library** (For API calls)
+4. **API keys for OpenWeather and Unsplash** (For fetching weather data and images)
 
 ### Steps
+
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/Event-Management-System.git
-   cd Event-Management-System
-   ```
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
 
-2. **Install dependencies:**
+2. **Set up a virtual environment:**
    ```bash
-   npm install
-   ```
+   python -m venv myenv
+   source myenv/bin/activate  # On Windows: myenv\Scripts\activate
 
-3. **Set up the database:**
-   * Use the provided Railway MySQL credentials or your own local setup.
-   * Update `backend/src/config/database.js` with the appropriate MySQL connection details.
-   * Run the SQL scripts (if provided) to set up tables.
-
-4. **Run the server:**
+3. **Install dependencies:**
    ```bash
-   node server.js
-   ```
+   pip install -r requirements.txt
 
-5. **Access the application:**
-   * Open your browser and navigate to: `http://localhost:3000`
-
-## Environment Variables
-Set up the following variables in a `.env` file (if not hardcoding):
-
-```env
-MYSQL_HOST=mysql.railway.internal
-MYSQL_USER=root
-MYSQL_PASSWORD=password
-MYSQL_DATABASE=railway
-MYSQL_PORT=3306
-MPESA_CONSUMER_KEY=YOUR_CONSUMER_KEY
-MPESA_CONSUMER_SECRET=YOUR_CONSUMER_SECRET
-CALLBACK_URL=YOUR_NGROK_URL/api/mpesa/callback
-```
-
-## Deployment
-
-### Railway Deployment
-1. Push your code to GitHub and connect your repository to Railway.
-2. Add the MySQL plugin to your project on Railway.
-3. Set up your environment variables in Railway under the "Variables" tab.
-4. Redeploy your project.
-
-### Testing M-Pesa Integration
-1. **Set up Ngrok**: Run Ngrok to expose your localhost to the internet.
-   ```bash
-   ngrok http 3000
-   ```
-   Copy the provided Ngrok URL and update the `CALLBACK_URL` environment variable.
-
-2. **Perform a Test Payment**: Use the checkout form to test payments and verify callback handling.
-
-3. **Verify Tickets**: Ensure the system generates tickets and stores payment information in the database.
-
-## Acknowledgments
-Special thanks to:
-* **Safaricom M-Pesa API** for payment integration.
-* **PDFKit** for generating PDF tickets.
-
-## Authors
-**[Group 19]**
-
+4. **Set up API keys:**
+   Obtain an API key from OpenWeather and Unsplash.
+   Replace the placeholders in the views.py file with your actual API keys:
