@@ -48,6 +48,15 @@ A **Django-based web application** that fetches real-time weather data for a giv
    ```bash
    pip install -r requirements.txt
 
-4. **Set up API keys:**
-   Obtain an API key from OpenWeather and Unsplash.
-   Replace the placeholders in the views.py file with your actual API keys:
+4. **Set Up API Keys:**
+
+- Obtain an API key from [OpenWeather](https://openweathermap.org/api) and [Unsplash](https://unsplash.com/developers).
+- Replace the placeholders in the `views.py` file with your actual API keys:
+
+  ```python
+  OPENWEATHER_API_KEY = "your_openweather_api_key"
+  UNSPLASH_API_KEY = "your_unsplash_api_key"
+
+
+
+
