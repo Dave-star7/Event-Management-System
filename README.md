@@ -2,6 +2,11 @@
 
 A **Django-based web application** that fetches real-time weather data for a given city using the OpenWeather API and displays a relevant image of the city using the Unsplash API.
 
+## Live Site
+
+You can access the live version of this project at:  
+[Live Weather App](https://nyarangi.pythonanywhere.com)
+
 ## Features
 
 - **Real-time Weather Data:** Fetches current weather conditions (temperature, description, and icon) for any city using the OpenWeather API.
@@ -75,11 +80,6 @@ Open your browser and navigate to `http://127.0.0.1:8000/` to view the applicati
 2. The app will display:
    - Current weather conditions (temperature, description, and weather icon).
 3. If no city is entered, the app defaults to Nairobi.
-
-## Live Site
-
-You can access the live version of this project at:  
-[Live Weather App](https://nyarangi.pythonanywhere.com)
 
 ## Contributing
 
