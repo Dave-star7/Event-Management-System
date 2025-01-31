@@ -76,5 +76,11 @@ Open your browser and navigate to `http://127.0.0.1:8000/` to view the applicati
    - Current weather conditions (temperature, description, and weather icon).
 3. If no city is entered, the app defaults to Nairobi.
 
+## Live Site
+
+You can access the live version of this project at:  
+[Live Weather App](https://nyarangi.pythonanywhere.com) *(Replace `your-pythonanywhere-username`)*
+
+
 
 
