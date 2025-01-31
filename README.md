@@ -79,8 +79,27 @@ Open your browser and navigate to `http://127.0.0.1:8000/` to view the applicati
 ## Live Site
 
 You can access the live version of this project at:  
-[Live Weather App](https://nyarangi.pythonanywhere.com) *(Replace `your-pythonanywhere-username`)*
+[Live Weather App](https://nyarangi.pythonanywhere.com)
 
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeatureName`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeatureName`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Acknowledgments
+
+- **OpenWeather** for providing the weather data API.
+- **Unsplash** for providing high-quality images.
+- **Django** and the Python community for their amazing tools and libraries.
 
 
 
