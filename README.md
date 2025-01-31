@@ -57,6 +57,24 @@ A **Django-based web application** that fetches real-time weather data for a giv
   OPENWEATHER_API_KEY = "your_openweather_api_key"
   UNSPLASH_API_KEY = "your_unsplash_api_key"
 
+5. **Run Migrations:**
+   ```bash
+   python manage.py migrate
+
+6. **Start the server:**
+   ```bash
+   python manage.py runserver
+
+7. **Access the Application:**
+
+Open your browser and navigate to `http://127.0.0.1:8000/` to view the application.
+
+## Usage
+
+1. On the homepage, enter the name of a city in the input field and click "Search."
+2. The app will display:
+   - Current weather conditions (temperature, description, and weather icon).
+3. If no city is entered, the app defaults to Nairobi.
 
 
 
